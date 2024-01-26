@@ -17,14 +17,14 @@ import { MatButtonModule } from '@angular/material/button'
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  addRecipeLabel: string = 'Add Recipe'
+  addRecipeLabel: string = 'Aggiungi Ricetta'
   action(): void {
     if (this.canAddRecipe) {
-      this.addRecipeLabel = 'Back'
+      this.addRecipeLabel = 'Indietro'
       this.canAddRecipe = false
       this.router.navigate(['new-recipe'], { relativeTo: this.route })
     } else {
-      this.addRecipeLabel = 'Add Recipe'
+      this.addRecipeLabel = 'Aggiungi Ricetta'
       this.canAddRecipe = true
       this.router.navigate(['..'], { relativeTo: this.route })
     }
