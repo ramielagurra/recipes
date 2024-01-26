@@ -1,0 +1,7 @@
+.card-container-id {
+  display: grid;
+  gap: 2rem;
+}
+::ng-deep h1 .highlight {
+  background-color: yellow;
+}

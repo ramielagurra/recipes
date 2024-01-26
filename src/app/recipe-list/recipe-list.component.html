@@ -1,0 +1,24 @@
+<div class="card-container-id">
+  <input type="search" [formControl]="searchControl" />
+  <div *ngFor="let recipe of recipeList; index as i">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h1 [id]="i" [appFilter]="searchControl.value">{{ recipe.title }}</h1>
+        </mat-card-title>
+        <mat-card-subtitle>
+          {{ recipe.creationDate | date: 'EEEE, d MMMM y' : undefined : 'it' }}
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ recipe.description }}</p>
+        <p>Ingredienti:</p>
+        <ul>
+          <li *ngFor="let ingredient of recipe.ingredients">
+            {{ ingredient }}
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
