@@ -2,6 +2,18 @@
   display: grid;
   gap: 2rem;
 }
+.mat-card-id {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 ::ng-deep h1 .highlight {
   background-color: yellow;
 }

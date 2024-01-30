@@ -1,0 +1,38 @@
+.header-id {
+  color: #a85bdc; /* Dark grey text */
+  margin-bottom: 15px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input[matInput],
+textarea[matInput] {
+  padding: 8px;
+}
+
+button[mat-stroked-button],
+button[mat-raised-button] {
+  margin: 10px 0; /* Vertical margin */
+}
+
+button[mat-stroked-button] {
+  border-width: 2px;
+}
+
+form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align form content */
+}
+
+mat-card-content,
+mat-card-actions {
+  width: 100%; /* Full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

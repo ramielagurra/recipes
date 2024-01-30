@@ -1,6 +1,6 @@
 <form [formGroup]="recipeForm">
-  <mat-card-header>
-    <mat-card-title>Aggiungi Ricetta</mat-card-title>
+  <mat-card-header class="header-id">
+    <mat-card-title>Aggiungi Nuova Ricetta</mat-card-title>
   </mat-card-header>
 
   <mat-card-content>
@@ -10,7 +10,7 @@
         type="text"
         id="title"
         formControlName="title"
-        placeholder="Title"
+        placeholder="Titolo"
       />
     </mat-form-field>
 
@@ -19,7 +19,7 @@
         matInput
         id="description"
         formControlName="description"
-        placeholder="Description"
+        placeholder="Descrizione"
       ></textarea>
     </mat-form-field>
 
@@ -31,15 +31,20 @@
             type="text"
             id="ingredients"
             [formControlName]="i"
-            placeholder="Ingredients"
+            placeholder="Ingrediente"
           />
-          <button mat-button matSuffix (click)="removeIngredient(i)">
+          <button
+            mat-button
+            matSuffix
+            *ngIf="getIngredients().length > 1"
+            (click)="removeIngredient(i)"
+          >
             Rimuovi
           </button>
         </mat-form-field>
       </ng-container>
     </ng-container>
-    <button mat-stroked-button (click)="addIngredient()">
+    <button mat-stroked-button color="primary" (click)="addIngredient()">
       Aggiungi Ingredienti
     </button>
   </mat-card-content>

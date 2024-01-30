@@ -1,7 +1,8 @@
 .home {
-    padding: 1rem;
+  padding: 1rem;
 }
 .app-header {
-    display: flex;
-    justify-content: space-between;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
 }

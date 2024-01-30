@@ -1,24 +1,48 @@
 <div class="card-container-id">
-  <input type="search" [formControl]="searchControl" />
-  <div *ngFor="let recipe of recipeList; index as i">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>
-          <h1 [id]="i" [appFilter]="searchControl.value">{{ recipe.title }}</h1>
-        </mat-card-title>
-        <mat-card-subtitle>
-          {{ recipe.creationDate | date: 'EEEE, d MMMM y' : undefined : 'it' }}
-        </mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{ recipe.description }}</p>
-        <p>Ingredienti:</p>
-        <ul>
-          <li *ngFor="let ingredient of recipe.ingredients">
-            {{ ingredient }}
-          </li>
-        </ul>
-      </mat-card-content>
-    </mat-card>
+  <a mat-raised-button color="primary" (click)="action()">Aggiungi Ricetta</a>
+  <mat-form-field>
+    <mat-label>Cerca</mat-label>
+    <input matInput type="search" [formControl]="searchControl" />
+  </mat-form-field>
+  <div
+    appFilterList
+    [recipeList]="recipeList"
+    [searchTerm]="searchControl.value"
+    (filteredList)="onFilter($event)"
+  >
+    <div *ngFor="let recipe of filteredRecipeList; index as i">
+      <mat-card class="mat-card-id">
+        <mat-card-header>
+          <mat-card-title>
+            <h1 [id]="i">
+              {{ recipe.title }}
+            </h1>
+          </mat-card-title>
+          <button
+            matIconSuffix="delete"
+            mat-icon-button
+            color="warn"
+            class="delete-button"
+            (click)="deleteRecipe(recipe.id)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+          <mat-card-subtitle>
+            {{
+              recipe.creationDate | date: 'EEEE, d MMMM y' : undefined : 'it'
+            }}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ recipe.description }}</p>
+          <p>Ingredienti:</p>
+          <ul>
+            <li *ngFor="let ingredient of recipe.ingredients">
+              {{ ingredient }}
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </div>

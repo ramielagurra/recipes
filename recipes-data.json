@@ -1,0 +1,55 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Caccio e pepe",
+      "description": "Una ricetta classica italiana",
+      "ingredients": [
+        "Spaghetti",
+        "Uova",
+        "Pecorino"
+      ],
+      "creationDate": "2023-12-24T22:23:00.599Z"
+    },
+    {
+      "id": "2",
+      "title": "Spaghetti alla carbonara",
+      "description": "Una ricetta classica italiana",
+      "ingredients": [
+        "Spaghetti",
+        "Guanciale",
+        "Uova",
+        "Pecorino"
+      ],
+      "creationDate": "2024-01-05T22:23:00.599Z"
+    },
+    {
+      "id": "b7b5",
+      "title": "aaa",
+      "description": "bbb",
+      "ingredients": [
+        "xxx",
+        "yyy"
+      ],
+      "creationDate": "2024-01-29T23:18:34.817Z"
+    },
+    {
+      "id": "51ed",
+      "title": "mjbk",
+      "description": "ujnbub",
+      "ingredients": [
+        "hybg"
+      ],
+      "creationDate": "2024-01-30T00:00:09.857Z"
+    },
+    {
+      "id": "6870",
+      "title": "sss",
+      "description": "ddd",
+      "ingredients": [
+        "fff"
+      ],
+      "creationDate": "2024-01-30T15:00:31.587Z"
+    }
+  ]
+}

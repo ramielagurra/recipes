@@ -1,7 +1,9 @@
 <div class="home">
   <header class="app-header">
-    <h1>Le ricette</h1>
-    <a mat-raised-button (click)="action()"> {{ addRecipeLabel }}</a>
+    <h1 class="h1-id">Le mie ricette</h1>
+    <div *ngIf="!this.router.url.includes('recipes-manager-app')">
+      <a mat-raised-button (click)="action()">Indietro</a>
+    </div>
   </header>
   <router-outlet></router-outlet>
 </div>
